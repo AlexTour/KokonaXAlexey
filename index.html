@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kokona x Alexey Experience</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .top-panel {
+      background-color: #87CEFA;
+    }
+    .bottom-panel {
+      background-color: #FFC0CB;
+    }
+    .button {
+      background-color: #ffffff;
+      border: 2px solid #000000;
+      color: #000000;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+      border-radius: 8px;
+    }
+    .button:active {
+      transform: scale(0.9);
+      box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+    .image {
+      margin-top: 20px;
+      width: 100px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel top-panel">
+    <button class="button" id="top-button">Bomba Sound</button>
+    <img src="top-image.png" alt="Top" class="image">
+  </div>
+  <div class="panel bottom-panel">
+    <button class="button" id="bottom-button">Misery Sound</button>
+    <img src="bottom-image.png" alt="Bottom" class="image">
+  </div>
+
+  <script>
+    // Welcome popup
+    alert("Welcome to the Kokona x Alexey experience. Press OK to proceed!");
+
+    // Audio elements (replace with your audio file paths)
+    const topAudio = new Audio('top-sound.mp3'); // Replace with your audio file path
+    const bottomAudio = new Audio('bottom-sound.mp3'); // Replace with your audio file path
+
+    // Button event listeners
+    document.getElementById('top-button').addEventListener('click', () => {
+      topAudio.play();
+    });
+
+    document.getElementById('bottom-button').addEventListener('click', () => {
+      bottomAudio.play();
+    });
+  </script>
+</body>
+</html>
